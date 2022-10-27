@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim8"
+            android:layout_marginBottom="@dimen/dim8"
+            android:layout_marginStart="@dimen/dim16"
+            android:layout_marginEnd="@dimen/dim16"
+            tools:context=".ui.detail.DetailFragment">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/dim32"
+                android:layout_height="@dimen/dim32"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim16"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text18"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintTop_toTopOf="@id/ivBack"
+                app:layout_constraintStart_toEndOf="@id/ivBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/ivBack"
+                android:text="@string/back" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim16"
+                app:layout_constraintTop_toBottomOf="@id/ivBack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/dim8">
+
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/dim160"
+                    android:maxHeight="@dimen/dim240"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/no_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim4"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardImage"
+                tools:text="CNBC" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim4"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/cardImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="17/09/2020 17:00" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dim16"
+                android:layout_marginTop="@dimen/dim8"
+                android:fontFamily="@font/cabin_medium"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/source"
+                tools:text="News Title" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim4"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="Shares in the Asia-Pacific were mixed Thursday as investors digest economic data in the region" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim4"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                tools:text="Author: Silvia Amaro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
